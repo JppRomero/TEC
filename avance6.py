@@ -77,7 +77,7 @@ dramab = {
     "⚫️ APPLE TV+" : ["PALMER", "FINCH"]
     }
 
-terrob = {
+terrorb = {
     "⚪️ DISNEY +" : ["LA SAGA DEL ALIEN", "THE EXORCIST"],
     "🔵 PRIME VIDEO" : ["TALK TO ME", "MIDSOMMAR"],
     "🔴 NETFLIX" : ["FEAR STREET", "EL HOYO"],
@@ -130,6 +130,7 @@ elif (eleccion == "animación"):
     
 print ("Juan Pablo Romero Anaya, TEC DE MONTERREY, 03/10/25, A01715182")    
            
+
 
 
 
