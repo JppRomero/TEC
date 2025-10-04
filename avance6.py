@@ -7,14 +7,16 @@ print ( "Antes de Recomendarte una Película, responde unas preguntas" )
 miedo_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Miedo?: " ))
 comedia_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Comedia?: " ))
 
-if miedo_punt < comedia_punt:
+if (miedo_punt or comedia_punt) <= 100:
+    promediopunt = ( miedo_punt + comedia_punt ) / 2
+    print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
+    if miedo_punt < comedia_punt:
         print ( "Ahhh, te gusta más la comedia!!!" )
-else:
+    else:
         print ( "Ahhh, te gusta más el miedo!!!" )
-
-
-promediopunt = ( miedo_punt + comedia_punt ) / 2
-print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
+else:
+    print (" El valor tenía que ser de un rango del 0 al 100, para el miedo y comedia.")
+    
 
 def mi_punt (md, cm):
     if md < cm:
@@ -51,7 +53,7 @@ while i < 2:
 
 acciónb = {
     
-    "️⚪️ DISNEY +" : [" ROGUE ONE", "PIRATAS DEL CARIBE"],
+    "️⚪️ DISNEY +" : ["ROGUE ONE", "PIRATAS DEL CARIBE"],
     "🔵 PRIME VIDEO" : ["TOP GUN MAVERICK", "DANGER IN THE MOUNTAIN"],
     "🔴 NETFLIX" : ["THE KILLER", "RED NOTICE"],
     "🟣️ HBO MAX" : ["MAD MAX, FURY ROAD", "KONG, SKULL ISLAND"],
@@ -130,7 +132,6 @@ elif (eleccion == "animación"):
     
 print ("Juan Pablo Romero Anaya, TEC DE MONTERREY, 03/10/25, A01715182")    
            
-
 
 
 
