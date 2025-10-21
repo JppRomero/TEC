@@ -45,9 +45,9 @@ import time
 print("\n")
 #La Bienvenida, la creamos como variable para poder modificarla.
 
-bienvenida = ("Bienvenid@ Universitari@, "
+bienv = ("Bienvenid@ Universitari@, "
               "Al Recomendador de Películas para Universitarios.")
-print(bienvenida)
+print(bienv)
 print("Descubre qué ver en tus ratos libres.")
 print("Antes de Recomendarte una Película, responde unas preguntas")
 # Aquí empieza el programa y le damos la bienvenida al usuario
@@ -284,8 +284,7 @@ print(f"Por cierto, mi género favorito y peli es: \
 print("\n")
 
 # Modificamos la variable bienvenida para el mensaje final
-final = bienvenida.replace("Bienvenid@ Universitari@, al", 
-                           "Gracias por usar el")  
+final = bienv.replace("Bienvenid@ Universitari@, Al", "Gracias por usar el")
 print(final)
 
 def despedida():
