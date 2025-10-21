@@ -308,6 +308,7 @@ print("Juan Pablo Romero Anaya, "
       "TEC DE MONTERREY, 10/10/25, A01715182")
 print("Te gustaria revisar otro género?, vuelve a correr el programa!!")
 print("Fin del Programa")
-# faltaria el tema de archivos
+
 
 # Aquí termina el programa
+
