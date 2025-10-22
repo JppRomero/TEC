@@ -16,5 +16,9 @@ else:
 promediopunt = ( miedo_punt + comedia_punt ) / 2
 print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
 
-# La verdad no se muy bien como poner operadores al principio en mi proyecto, cuando esté más adentro si podría/
-#implementar más operadores pero al inicio, como que no la veo muy bien, :).
+def mi_punt (md, cm):
+    if md < cm:
+        return "Fijate que al creador del programa le Gusta la Comedia!"
+    else:
+        return "Fijate que al creador del programa le Gusta el Miedoooo!"
+print(mi_punt (20, 90) )
