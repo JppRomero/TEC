@@ -290,6 +290,7 @@ if __name__ == "__main__":
         elif decision == "0":
             i = 1
             print("Fin del Programa")
+            
         else:
             print("Te equivocaste pero ahi te reincio el programa")
             i = 0
