@@ -70,7 +70,7 @@ Esto da un toque más dinámico y personalizado a la interacción.
 
 
     5. Responde las preguntas que el programa te hará y disfruta tus recomendaciones 🍿.
-## Authors
+## Autores
 
 - [@JppRomero](https://github.com/JppRomero)
 
