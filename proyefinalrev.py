@@ -38,13 +38,14 @@ def pelis (generos):
         return "Elegiste Terror, ¡prepárate para asustarte, hahaha!!!"
     elif (generos == "animación"):
         return "Elegiste Animación, siempre divertidas."
-    else:
-        return "Este genero no esta en la lista!."
-        
-   
-eleccion = input ("")   
-print ( pelis (eleccion) )
 
-# Lo que voy a hacer por lo mientras es guardar la elección del usuario en (eleccion) para usarlo después y poder
-# recomendarle las pelis.
-    
+i = 0
+while i < 2:
+    eleccion = input ("")
+    if eleccion in generos:
+        print (pelis (eleccion))
+        i = i + 3
+    else:
+        print ("Opción No Valida")
+        i = i + 0
+        
