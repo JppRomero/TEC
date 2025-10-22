@@ -283,7 +283,7 @@ if __name__ == "__main__":
         print("Hoy mi mood me dice que me despida así:", despedida())
         print("Juan Pablo Romero Anaya, TEC DE MONTERREY, A01715182")
         print("¿Te gustaría revisar otro género?" 
-        " escribe '1' (para correr de vuelta)' o '0' (Fin del Programa)': ")
+        " escribe 1 (para correr de vuelta)' o 0 (Fin del Programa)': ")
         decision = str(input(""))
         if decision == "1":
             i = 0
