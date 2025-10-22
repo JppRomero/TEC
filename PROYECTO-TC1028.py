@@ -86,7 +86,7 @@ def pelis(eleccion):
     Responde con un mensaje personalizado para cada género.
     """
 
-    if eleccion == "acción":
+    if eleccion == "accion":
         return "Elegiste Acción, prepárate para lo chido!!!."
     elif eleccion == "comedia":
         return "Elegiste Comedia, te vas a reír mucho!!!."
@@ -94,7 +94,7 @@ def pelis(eleccion):
         return "Elegiste Drama, algo más serio y profundo, me encanta!!."
     elif eleccion == "terror":
         return "Elegiste Terror, ¡prepárate para asustarte, hahaha!!!"
-    elif eleccion == "animación":
+    elif eleccion == "animacion":
         return "Elegiste Animación, siempre divertidas."
 
 
@@ -106,7 +106,7 @@ def pedir_genero():
     y si no es válida, le pide que intente de nuevo.
     """
 
-    generos = ["acción", "comedia", "drama", "terror", "animación"]
+    generos = ["accion", "comedia", "drama", "terror", "animacion"]
 
     print("Hay 5 géneros de pelis: "
           "acción, comedia, drama, terror y animación !!")
@@ -116,7 +116,13 @@ def pedir_genero():
         # ciclo para pedir el género hasta que sea válido
         print("Escribe el género que prefieras: ")
         eleccionsinm = input("")
+        # normalizamos la entrada del usuario
         eleccion = eleccionsinm.lower()
+        eleccion = eleccion.replace("á", "a")
+        eleccion = eleccion.replace("é", "e")
+        eleccion = eleccion.replace("í", "i")
+        eleccion = eleccion.replace("ó", "o")
+        eleccion = eleccion.replace("ú", "u")
         if eleccion in generos:
             print(pelis(eleccion))
             return eleccion
@@ -242,7 +248,7 @@ if __name__ == "__main__":
         }
 
         # Condicionales de recomendación
-        if eleccion == "acción":
+        if eleccion == "accion":
             lista = accionb
         elif eleccion == "comedia":
             lista = comediab
