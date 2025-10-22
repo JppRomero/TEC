@@ -1,28 +1,31 @@
 print ( "Bienvenid@ Universitari@, al Recomendador de Películas para Universitarios. " )
+print("\n")
 print ( "Descubre qué ver en tus ratos libres." )
-
 
 print ( "Antes de Recomendarte una Película, responde unas preguntas" )
 
 miedo_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Miedo?: " ))
 comedia_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Comedia?: " ))
 
-if (miedo_punt <= 100 and comedia_punt <= 100):
-    promediopunt = ( miedo_punt + comedia_punt ) / 2
-    print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
-    if miedo_punt < comedia_punt:
-        print ( "Ahhh, te gusta más la comedia!!!" )
+def punt (miedo_punt, comedia_punt):
+    if (miedo_punt <= 100 and comedia_punt <= 100):
+        promediopunt = ( miedo_punt + comedia_punt ) / 2
+        print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
+        if miedo_punt < comedia_punt:
+            print ( "Ahhh, te gusta más la comedia!!!" )
+        else:
+            print ( "Ahhh, te gusta más el miedo!!!" )
     else:
-        print ( "Ahhh, te gusta más el miedo!!!" )
-else:
-    print (" El valor tenía que ser de un rango del 0 al 100, para el miedo y comedia.")
-    
+        print (" El valor tenía que ser de un rango del 0 al 100, para el miedo y comedia.")
+punt (miedo_punt, comedia_punt)
+
 
 def mi_punt (md, cm):
     if md < cm:
-        return "Fijate que al creador del programa le Gusta la Comedia!"
+        return "Fijate que al creador del programa le Gusta más la Comedia!"
     else:
-        return "Fijate que al creador del programa le Gusta el Miedoooo!"
+        return "Fijate que al creador del programa le Gusta más el Miedoooo!"
+    
 print(mi_punt (20, 90) )
 
 print ("Hay 5 géneros de pelis elige la cuál te guste más: acción, comedia, drama, terror y animación !! ")
@@ -43,7 +46,9 @@ def pelis (generos):
 
 i = 0
 while i < 2:
-    eleccion = input ("")
+    eleccionsinm = input ("")
+    eleccion = eleccionsinm.lower()
+
     if eleccion in generos:
         print (pelis (eleccion))
         i = i + 3
@@ -129,7 +134,19 @@ elif (eleccion == "animación"):
         for peli in pelis:
             print (f"\n - {peli}")
             
-    
-print ("Juan Pablo Romero Anaya, TEC DE MONTERREY, 03/10/25, A01715182")    
-           
+calificacion = int(input( "\n Del 0 al 100, ¿Qué calificación le das a este recomendador de pelis?: " ))
+
+def calif (calificacion):
+    if (calificacion <= 100):
+        return f"Gracias por calificar con un {calificacion}, seguiremos mejorando!!"
+    else:
+        return "El valor tenía que ser de un rango del 0 al 100."
+print (calif (calificacion) )
+
+mi_fav = [["Acción"], ["Avengers Endgame"]]
+print ( f"Por cierto, mi género favorito y peli es: \n {mi_fav[0][0]} y {mi_fav[1][0]}. ")
+print("\n")
+print ("Espero que te haya gustado el recomendador de pelis, nos vemos pronto!!")
+print ("Juan Pablo Romero Anaya, TEC DE MONTERREY, 10/10/25, A01715182")    
+print ("Fin del Programa")        
 
