@@ -7,14 +7,16 @@ print ( "Antes de Recomendarte una Película, responde unas preguntas" )
 miedo_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Miedo?: " ))
 comedia_punt = int(input( "Del 0 al 100, ¿Cuánto te gustan las películas de Comedia?: " ))
 
-if miedo_punt < comedia_punt:
+if (miedo_punt <= 100 and comedia_punt <= 100):
+    promediopunt = ( miedo_punt + comedia_punt ) / 2
+    print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
+    if miedo_punt < comedia_punt:
         print ( "Ahhh, te gusta más la comedia!!!" )
-else:
+    else:
         print ( "Ahhh, te gusta más el miedo!!!" )
-
-
-promediopunt = ( miedo_punt + comedia_punt ) / 2
-print ( f" Tu promedio entre Miedo y Comedia es: {promediopunt} ")
+else:
+    print (" El valor tenía que ser de un rango del 0 al 100, para el miedo y comedia.")
+    
 
 def mi_punt (md, cm):
     if md < cm:
@@ -48,4 +50,86 @@ while i < 2:
     else:
         print ("Opción No Valida")
         i = i + 0
-        
+
+acciónb = {
+    
+    "️⚪️ DISNEY +" : ["ROGUE ONE", "PIRATAS DEL CARIBE"],
+    "🔵 PRIME VIDEO" : ["TOP GUN MAVERICK", "DANGER IN THE MOUNTAIN"],
+    "🔴 NETFLIX" : ["THE KILLER", "RED NOTICE"],
+    "🟣️ HBO MAX" : ["MAD MAX, FURY ROAD", "KONG, SKULL ISLAND"],
+    "🟠 PARAMOUNT PLUS" : ["TRANSFORMERS, AGE OF EXTINCTION", "BUMBLEBLEE"],
+    "⚫️ APPLE TV+" : ["THE GORGE", "THE FAMILY PLAN"]
+    }
+
+comediab = {
+    "⚪️️ DISNEY +" : ["HOME ALONE", "THE PRINCESS DIARIES"],
+    "🔵 PRIME VIDEO" : ["THE UNDERDOGGS", "ANYTHING´S POSSIBLE"],
+    "🔴 NETFLIX" : ["DO REVENGE", "ME TIME"],
+    "🟣️ HBO MAX" : ["FREE GUY", "THE 40-YEAR OLD VIRGIN"],
+    "🟠️ PARAMOUNT PLUS" : ["MEAN GIRLS", "HOW TO LOSE A GUY IN 10 DAYS"],
+    "⚫️ APPLE TV+" : ["FLORA AND SON", "ON THE ROCKS"]
+    }
+
+dramab = {
+    "⚪️️ DISNEY +" : ["TITANIC", "BOHEMIAN RHAPSODY"],
+    "🔵️ PRIME VIDEO" : ["PARASITE", "ARGENTINA - 1985"],
+    "🔴 NETFLIX" : ["ROMA", "MARRIAGE STORY"],
+    "🟣️ HBO MAX" : ["JOKER", "GOODFELLAS"],
+    "🟠️ PARAMOUNT PLUS" : ["GOOD WILL HUNTING", "AMERICAN BEAUTY"],
+    "⚫️ APPLE TV+" : ["PALMER", "FINCH"]
+    }
+
+terrorb = {
+    "⚪️ DISNEY +" : ["LA SAGA DEL ALIEN", "THE EXORCIST"],
+    "🔵 PRIME VIDEO" : ["TALK TO ME", "MIDSOMMAR"],
+    "🔴 NETFLIX" : ["FEAR STREET", "EL HOYO"],
+    "🟣️ HBO MAX" : ["THE CONJURING", "THE SHINING"],
+    "🟠️ PARAMOUNT PLUS" : ["SMILE", "SCREAM (CUALQUIERA)"],
+    "⚫️ APPLE TV+" : ["SERVANT", "THE LOST BUS"]
+    }
+
+animaciónb = {
+    "⚪️️ DISNEY +" : ["COCO", "INSIDE OUT 2"],
+    "🔵 PRIME VIDEO" : ["GHOST IN THE SHELL", "RANGO"],
+    "🔴 NETFLIX" : ["PINOCHO (GUILLERMO DEL TORO)", "MITCHELLS CONTRA LAS MÁQUINAS"],
+    "🟣️ HBO MAX" : ["EL VIAJE DE CHIHIRO", "PRINCESA MONONOKE"],
+    "🟠️ PARAMOUNT PLUS" : ["BOB ESPONJA", "LOS PINGÜINOS DE MADAGASCAR"],
+    "⚫️ APPLE TV+" : ["WOLFWALKERS", "LUCK"]
+    }
+    
+
+
+if (eleccion == "acción"):
+    for plataformas, pelis in acciónb.items():
+        print (f"\n {plataformas}:")
+        for peli in pelis:
+            print (f"\n - {peli}")
+            
+elif (eleccion == "comedia"):
+    for plataformas, pelis in comediab.items():
+        print(f"\n {plataformas}:")
+        for peli in pelis:
+            print (f"\n - {peli}")
+            
+elif (eleccion == "drama"):
+    for plataformas, pelis in dramab.items():
+        print(f"\n {plataformas}:")
+        for peli in pelis:
+            print (f"\n - {peli}")
+
+elif (eleccion == "terror"):
+    for plataformas, pelis in terrorb.items():
+        print(f"\n {plataformas}:")
+        for peli in pelis:
+            print (f"\n - {peli}")
+            
+elif (eleccion == "animación"):
+    for plataformas, pelis in animaciónb.items():
+        print(f"\n {plataformas}:")
+        for peli in pelis:
+            print (f"\n - {peli}")
+            
+    
+print ("Juan Pablo Romero Anaya, TEC DE MONTERREY, 03/10/25, A01715182")    
+           
+
