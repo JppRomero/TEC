@@ -147,15 +147,13 @@ def calif(calificacion):
         return "El valor tenía que ser de un rango del 0 al 100."
 
 
-def despedida():
+def despedida(valor):
     """ 
     Esta función elige aleatoriamente 
     una despedida para el usuario, 
     recibiendo un valor aleatorio entre 0 y 1    
     Y devolviendo un mensaje personalizado.
     """
-
-    valor = random.random()
     if valor < 0.5:
         return "Nos vemos pronto!!"
     else:
@@ -178,14 +176,73 @@ if __name__ == "__main__":
     print("Antes de Recomendarte una Película, responde unas preguntas")
     print("\n")
     #Preguntas para conocer los gustos del usuario.
-    miedo_punt = int(input("Del 0 al 100, " \
-    "¿Cuánto te gustan las películas de Miedo?: "))
-    comedia_punt = int(input("Del 0 al 100, " \
-    "¿Cuánto te gustan las películas de Comedia?: "))
+    while True:
+        """ Ciclo para pedir las puntuaciones
+        hasta que sean válidas
+        """
+        try:
+            miedo_punt = int(input("Del 0 al 100, " \
+            "¿Cuánto te gustan las películas de Miedo?: "))
+            comedia_punt = int(input("Del 0 al 100, " \
+            "¿Cuánto te gustan las películas de Comedia?: "))
+            break  
+        except ValueError:
+            # Manejo de error si la entrada no es un número válido
+            print("Por favor, ingresa un número válido del 0 al 100.")
 
     punt(miedo_punt, comedia_punt)
     print(mi_punt(20, 90))
     print("\n")
+    # Diccionarios de películas, 
+    #cada uno con sus respectivas plataformas y títulos.
+    accionb = {
+        "️ ⚪️ DISNEY +": ["ROGUE ONE", "PIRATAS DEL CARIBE"],
+        " 🔵 PRIME VIDEO": ["TOP GUN MAVERICK", 
+                        "DANGER IN THE MOUNTAIN"],
+        " 🔴 NETFLIX": ["THE KILLER", "RED NOTICE"],
+        " 🟣️ HBO MAX": ["MAD MAX, FURY ROAD", "KONG, SKULL ISLAND"],
+        " 🟠 PARAMOUNT +": ["TRANSFORMERS, AGE OF EXTINCTION", 
+                        "BUMBLEBLEE"],
+        " ⚫️ APPLE TV+": ["THE GORGE", "THE FAMILY PLAN"]
+    }
+
+    comediab = {
+        " ⚪️️ DISNEY +": ["HOME ALONE", "THE PRINCESS DIARIES"],
+        " 🔵 PRIME VIDEO": ["THE UNDERDOGGS", "ANYTHINGS POSSIBLE"],
+        " 🔴 NETFLIX": ["DO REVENGE", "ME TIME"],
+        " 🟣️ HBO MAX": ["FREE GUY", "THE 40-YEAR OLD VIRGIN"],
+        " 🟠️ PARAMOUNT +": ["MEAN GIRLS", 
+                            "HOW TO LOSE A GUY IN 10 DAYS"],
+        " ⚫️ APPLE TV+": ["FLORA AND SON", "ON THE ROCKS"]
+    }
+
+    dramab = {
+        " ⚪️️ DISNEY +": ["TITANIC", "BOHEMIAN RHAPSODY"],
+        " 🔵️ PRIME VIDEO": ["PARASITE", "ARGENTINA - 1985"],
+        " 🔴 NETFLIX": ["ROMA", "MARRIAGE STORY"],
+        " 🟣️ HBO MAX": ["JOKER", "GOODFELLAS"],
+        " 🟠️ PARAMOUNT +": ["GOOD WILL HUNTING", "AMERICAN BEAUTY"],
+        " ⚫️ APPLE TV+": ["PALMER", "FINCH"]
+    }
+
+    terrorb = {
+        " ⚪️ DISNEY +": ["LA SAGA DEL ALIEN", "THE EXORCIST"],
+        " 🔵 PRIME VIDEO": ["TALK TO ME", "MIDSOMMAR"],
+        " 🔴 NETFLIX": ["FEAR STREET", "EL HOYO"],
+        " 🟣️ HBO MAX": ["THE CONJURING", "THE SHINING"],
+        " 🟠️ PARAMOUNT +": ["SMILE", "SCREAM (CUALQUIERA)"],
+        " ⚫️ APPLE TV+": ["SERVANT", "THE LOST BUS"]
+    }
+
+    animacionb = {
+        " ⚪️️ DISNEY +": ["COCO", "INSIDE OUT 2"],
+        " 🔵 PRIME VIDEO": ["GHOST IN THE SHELL", "RANGO"],
+        " 🔴 NETFLIX": ["PINOCHO (GUILLERMO DEL TORO)",
+                        "MITCHELLS CONTRA LAS MÁQUINAS"],
+        " 🟣️ HBO MAX": ["EL VIAJE DE CHIHIRO", "PRINCESA MONONOKE"],
+        " 🟠️ PARAMOUNT +": ["BOB ESPONJA","LOS PINGÜINOS DE MADAGASCAR"],
+        " ⚫️ APPLE TV+": ["WOLFWALKERS", "LUCK"]
+    }    
 
     i = 0
     while i < 1:
@@ -196,56 +253,6 @@ if __name__ == "__main__":
         hasta que el usuario decida salir.
         """
         eleccion = pedir_genero()
-        # Diccionarios de películas, 
-        #cada uno con sus respectivas plataformas y títulos.
-        accionb = {
-            "️ ⚪️ DISNEY +": ["ROGUE ONE", "PIRATAS DEL CARIBE"],
-            " 🔵 PRIME VIDEO": ["TOP GUN MAVERICK", 
-                                "DANGER IN THE MOUNTAIN"],
-            " 🔴 NETFLIX": ["THE KILLER", "RED NOTICE"],
-            " 🟣️ HBO MAX": ["MAD MAX, FURY ROAD", "KONG, SKULL ISLAND"],
-            " 🟠 PARAMOUNT +": ["TRANSFORMERS, AGE OF EXTINCTION", 
-                                "BUMBLEBLEE"],
-            " ⚫️ APPLE TV+": ["THE GORGE", "THE FAMILY PLAN"]
-        }
-
-        comediab = {
-            " ⚪️️ DISNEY +": ["HOME ALONE", "THE PRINCESS DIARIES"],
-            " 🔵 PRIME VIDEO": ["THE UNDERDOGGS", "ANYTHINGS POSSIBLE"],
-            " 🔴 NETFLIX": ["DO REVENGE", "ME TIME"],
-            " 🟣️ HBO MAX": ["FREE GUY", "THE 40-YEAR OLD VIRGIN"],
-            " 🟠️ PARAMOUNT +": ["MEAN GIRLS", 
-                                 "HOW TO LOSE A GUY IN 10 DAYS"],
-            " ⚫️ APPLE TV+": ["FLORA AND SON", "ON THE ROCKS"]
-        }
-
-        dramab = {
-            " ⚪️️ DISNEY +": ["TITANIC", "BOHEMIAN RHAPSODY"],
-            " 🔵️ PRIME VIDEO": ["PARASITE", "ARGENTINA - 1985"],
-            " 🔴 NETFLIX": ["ROMA", "MARRIAGE STORY"],
-            " 🟣️ HBO MAX": ["JOKER", "GOODFELLAS"],
-            " 🟠️ PARAMOUNT +": ["GOOD WILL HUNTING", "AMERICAN BEAUTY"],
-            " ⚫️ APPLE TV+": ["PALMER", "FINCH"]
-        }
-
-        terrorb = {
-            " ⚪️ DISNEY +": ["LA SAGA DEL ALIEN", "THE EXORCIST"],
-            " 🔵 PRIME VIDEO": ["TALK TO ME", "MIDSOMMAR"],
-            " 🔴 NETFLIX": ["FEAR STREET", "EL HOYO"],
-            " 🟣️ HBO MAX": ["THE CONJURING", "THE SHINING"],
-            " 🟠️ PARAMOUNT +": ["SMILE", "SCREAM (CUALQUIERA)"],
-            " ⚫️ APPLE TV+": ["SERVANT", "THE LOST BUS"]
-        }
-
-        animacionb = {
-            " ⚪️️ DISNEY +": ["COCO", "INSIDE OUT 2"],
-            " 🔵 PRIME VIDEO": ["GHOST IN THE SHELL", "RANGO"],
-            " 🔴 NETFLIX": ["PINOCHO (GUILLERMO DEL TORO)",
-                            "MITCHELLS CONTRA LAS MÁQUINAS"],
-            " 🟣️ HBO MAX": ["EL VIAJE DE CHIHIRO", "PRINCESA MONONOKE"],
-            " 🟠️ PARAMOUNT +": ["BOB ESPONJA","LOS PINGÜINOS DE MADAGASCAR"],
-            " ⚫️ APPLE TV+": ["WOLFWALKERS", "LUCK"]
-        }
 
         # Condicionales de recomendación
         if eleccion == "accion":
@@ -265,10 +272,17 @@ if __name__ == "__main__":
             print(f"\n {plataformas}:")
             for peli in pelis_lista:
                 print(f"\n - {peli}")
-
-        calificacion = int(input("\n Del 0 al 100, "
-                         "¿Qué calificación le das a "
-                         "este recomendador de pelis?: "))        
+        while True:
+            """ Ciclo para pedir la calificación
+            hasta que sea válida
+            """
+            try:
+                calificacion = int(input("\n Del 0 al 100, "
+                                     "¿Qué calificación le das a "
+                                     "este recomendador de pelis?: "))
+                break  
+            except ValueError:
+                print("Por favor, ingresa un número válido del 0 al 100.")        
         print(calif(calificacion))
 
         mi_fav = [["Acción"], ["Avengers Endgame"]]
@@ -279,8 +293,8 @@ if __name__ == "__main__":
         final = bienv.replace("Bienvenid@ Universitari@, Al",
                                "Gracias por usar el")
         print(final)
-
-        print("Hoy mi mood me dice que me despida así:", despedida())
+        valor = random.random()
+        print("Hoy mi mood me dice que me despida así:", despedida(valor))
         print("Juan Pablo Romero Anaya, TEC DE MONTERREY, A01715182")
         print("¿Te gustaría revisar otro género?" 
         " escribe 1 (para correr de vuelta)' o 0 (Fin del Programa)': ")
