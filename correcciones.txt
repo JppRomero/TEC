@@ -1,0 +1,18 @@
+Correciones Proyecto-TC1028
+* Explicación de proyecto en comentario hasta arriba en mas detalle
+Puse un comentario explicando los pasos para poder ejecutar el código y también otra explicación sobre de qué trata mi proyecto, quedando al principio del código.
+
+* Solo tener la entrega final y el README en el github
+Modifiqué las otras entregas que tenía en el repositorio y solamente dejé el programa Final, también modifiqué el Repositorio para que tuviera más información respecto al proyecto.
+
+* incluir instrucciones de como correr el proyecto como "python proyefinalrev.py"
+Agregue información sobre cómo correr el proyecto de manera correcta en el readme y en el programa.
+
+* si se usa random bien pero imports usualmente están al principio del documento
+Modificamos el lugar de donde Importamos las Librerías de Python, colocándolas hasta arriba de, código.
+
+* checa PEP8 a detalle
+Arreglamos detalles de PEP8 el cual se puede ver en las modificaciones del código.
+
+* Mayor interacción con el usuario.
+Arreglamos esto al agregar ciclos, los cuales validan si el tipo de dato es el correcto y si no, pide al usuario que indique el contenido correcto.
