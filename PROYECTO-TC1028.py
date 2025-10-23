@@ -282,6 +282,7 @@ if __name__ == "__main__":
                                      "este recomendador de pelis?: "))
                 break  
             except ValueError:
+                # Manejo de error si la entrada no es un número válido
                 print("Por favor, ingresa un número válido del 0 al 100.")        
         print(calif(calificacion))
 
