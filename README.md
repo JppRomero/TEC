@@ -6,13 +6,13 @@ Este programa, creado especialmente para universitarios, te ayuda a descubrir pe
 con esto podrás usarlas para relajarte con tu roomie, amig@s, novi@, familia, o simplemente para pasar un buen rato tú sol@.
 
 
-## 🚀 Sobre Mi
+##  Sobre Mi
 Autor: Juan Pablo Romero Anaya
 Carrera: Ingeniería en Tecnologías Computacionales (ITC)
 Campus: Tecnológico de Monterrey, Querétaro
 Fecha: 22/08/2025
 
-## 🧠 Propósito del Programa
+##  Propósito del Programa
 
 El Recomendador de Películas para Universitarios busca resolver una situación común entre estudiantes:
 
@@ -20,7 +20,7 @@ El Recomendador de Películas para Universitarios busca resolver una situación 
 
 El programa guía al usuario a través de preguntas simples para conocer sus preferencias (como cuánto le gusta la comedia o el terror), y luego le muestra recomendaciones personalizadas de distintos servicios como Netflix, Disney+, Prime Video, HBO Max, Paramount+ o Apple TV+.
 
-## ⚙️ Algoritmo
+## Algoritmo
         1. Mostrar un mensaje de bienvenida al usuario, indicando el propósito del programa.
 
         2. Crear una lista de géneros de películas disponibles.
@@ -43,17 +43,17 @@ El programa guía al usuario a través de preguntas simples para conocer sus pre
 
         11. Si responde “no”: mostrar el mensaje de despedida.
         FIN
-## 🔍 Explicación de Librerías Usadas
+## Explicación de Librerías Usadas
 
 La librería time se utiliza para mejorar la experiencia del usuario al agregar pequeñas pausas entre mensajes y listas de películas, y esto hace que el programa se sienta más natural y fluido, simulando el ritmo de una conversación en lugar de imprimir todo de golpe.
 
-    📚 Referencia: https://docs.python.org/3/library/time.html
+     Referencia: https://docs.python.org/3/library/time.html
 
 La librería random se usa para generar aleatoriedad en las respuestas del programa, como elegir una despedida diferente cada vez que el usuario finaliza su sesión.
 Esto da un toque más dinámico y personalizado a la interacción.
 
-    📚 Referencia: https://docs.python.org/3/library/random.html
-## ▶️ Instrucciones de Ejecución
+     Referencia: https://docs.python.org/3/library/random.html
+## Instrucciones de Ejecución
     1. Asegúrate de tener Python 3 instalado en tu computadora.
 
     2. Guarda el archivo como proyefinalrev.py.
